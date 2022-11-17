@@ -1,0 +1,36 @@
+fieldset {
+  border-radius: 5px;
+  font-family: sans-serif;
+}
+
+input {
+  border-radius: 3px;
+}
+
+legend {
+  font-weight: 700;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.button button {
+  font-size: 18px;
+  padding: 6px 16px;
+}
+
+.dados-monitoria {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.dados-pessoais {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+

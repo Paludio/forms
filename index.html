@@ -1,80 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
-</head>
-<body>
-  <section>
-    <label for="e-mail"> Seu e-mail
-      <input type="email" name="" id="e-mail" required min="10" max="50" placeholder="Seu e-mail">
-    </label>
-  </section>
-  <section>
-    <label for="nome"> Nome Completo
-      <input type="text" id="nome" min="10" max="40" placeholder="Sua resposta">
-    </label>
-  </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset class="dados-pessoais">
+        <legend>Dados pessoais</legend>
+        <section>
+          <label for="e-mail">
+            Seu e-mail:
+            <input
+              type="email"
+              name=""
+              id="e-mail"
+              required
+              min="10"
+              max="50"
+              placeholder="Seu e-mail"
+            />
+          </label>
+        </section>
+        <section>
+          <label for="nome">
+            Nome Completo:
+            <input
+              type="text"
+              id="nome"
+              min="10"
+              max="40"
+              placeholder="Sua resposta"
+            />
+          </label>
+        </section>
+      </fieldset>
 
-  <select id="turma" name="selectTurma" required>
-    <option value="turma28-A">Turma28-A</option>
-    <option value="turma28-B">Turma28-B</option>
-  </select>
-<br>
-  <select id="monitoria" name="selectMonitoria">
-    <option value="individual">Monitoria Individual</option>
-    <option value="grupo">Monitoria em Grupo</option>
-  </select>
+      <fieldset class="dados-pessoais">
+        <legend>Turma/Monitoria</legend>
 
-  <form action="">
+        <label for="turma">
+          Turma:
+          <select id="turma" name="selectTurma" required>
+            <option value="turma28-A">28-A</option>
+            <option value="turma28-B">28-B</option>
+          </select>
+        </label>
 
-    <h4>Quem conduziu a monitoria hoje?</h4>
-    <label for="seleciona-monitor">
-        <select name="monitoria" id="seleciona-monitor" required>
-            <option value="Pablo">Pablo</option>
-            <option value="Thalles">Thalles</option>
-            <option value="Joicy">Joicy</option>
-            <option value="Carol">Carolzita</option>
-        </select>
-    </label>
-    
+        <label for="monitoria">
+          Monitoria:
+          <select id="monitoria" name="selectMonitoria">
+            <option value="individual">Individual</option>
+            <option value="grupo">Grupo</option>
+          </select>
+        </label>
+      </fieldset>
 
-    <!-- 6 - Crie um campo onde seja possível marcar a satisfação -->
-    <label for="satisfacao">
-        <h4>De 0 a 10, o quanto você ficou satisfeita(o) com essa monitoria?</h4>
-        <select name="nota" id="satisfacao" required>
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
-    </label>
+      <fieldset class="dados-pessoais">
+        <legend>Dados Monitoria</legend>
+        <div class="dados-monitoria">
+          <h4>Quem conduziu a monitoria hoje?</h4>
+          <label for="seleciona-monitor">
+            <select name="monitoria" id="seleciona-monitor" required>
+              <option value="Pablo">Pablo</option>
+              <option value="Thalles">Thalles</option>
+              <option value="Joicy">Joicy</option>
+              <option value="Carol">Carolzita</option>
+            </select>
+          </label>
+        </div>
 
-</form>
+        <!-- 6 - Crie um campo onde seja possível marcar a satisfação -->
+        <div class="dados-monitoria">
+          <label for="satisfacao">
+            <h4>
+              De 0 a 10, o quanto você ficou satisfeita(o) com essa monitoria?
+            </h4>
+            <select name="nota" id="satisfacao" required>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
 
-  <!-- Requisito 07 - Felipe -->
-  <section id="justifica-textarea">
-    <label for="justificativa"></label>
-    <textarea name="" id="justificativa" placeholder="Justifique aqui sua resposta anterior" cols="30" rows="10" required></textarea>
-  </section>
+      <!-- Requisito 07 - Felipe -->
+      <fieldset class="dados-pessoais">
+        <legend>Sua opinião</legend>
+        <section id="justifica-textarea">
+          <label for="justificativa"></label>
+          <textarea
+            name=""
+            id="justificativa"
+            placeholder="Justifique aqui sua resposta anterior"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+        </section>
 
-  <!-- Requisito 08 - Felipe -->
-  <section id="sugestoes-textarea">
-    <label for="sugestoes"></label>
-    <textarea name="sugestoes" id="sugestoes" cols="30" rows="10" maxlength="500" placeholder="Deixe aqui suas sugestões"></textarea>
-  </section>
+        <!-- Requisito 08 - Felipe -->
+        <section id="sugestoes-textarea">
+          <label for="sugestoes"></label>
+          <textarea
+            name="sugestoes"
+            id="sugestoes"
+            cols="30"
+            rows="10"
+            maxlength="500"
+            placeholder="Deixe aqui suas sugestões"
+          ></textarea>
+        </section>
+      </fieldset>
 
-  <button type="button" id="send-button">Enviar</button>
-  <script src="./script.js"></script>
-</body>
+      <div class="button">
+        <button type="button" id="send-button">Enviar</button>
+      </div>
+    </form>
+    <script src="./script.js"></script>
+  </body>
 </html>
