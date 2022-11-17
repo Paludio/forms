@@ -8,33 +8,41 @@ const monitoria = document.getElementById('monitoria');
 
 const verifyEmail = (value) => {
   if (value < 10 || value > 50 ) {
-    return window.alert('Dados Inválidos');
+    return true;
   }
+
+  return false;
 }
 
 const verifyNome = (value) => {
   if (value < 10 || value > 40 ) {
-    return window.alert('Dados Inválidos');
+    return true;
   }
+  return false;
 }
 
 const verifyTurma = (value) => {
   if (value !== 'turma28-A' || value !== 'turma28-B') {
-    return window.alert('Dados Inválidos');
+    return true;
   }
+  return false;
 }
 
 const verifyMonitoria = (value) => {
   if (value !== 'individual' || value !== 'grupo') {
-    return window.alert('Dados Inválidos');
+    return true;
   }
+  return false;
 }
 
 sendButton.addEventListener('click', () => {
-  verifyEmail(email.value.length);
-  verifyNome(nome.value.length);
-  verifyTurma(turma.value);
-  verifyMonitoria(monitoria.value);
-
+  const test1 = verifyEmail(email.value.length);
+  const test2 = verifyNome(nome.value.length);
+  const test3 = verifyTurma(turma.value);
+  const test4 = verifyMonitoria(monitoria.value);
+  
+  if ( test1 || test2 || test3 || test4 ) {
+    return window.alert('Dados inválidos');
+  }
 });
 
