@@ -36,16 +36,16 @@ Este repositório foi criado para armazenar os códigos utilizados nas monitoria
     Com o texto: "De 0 a 10, o quanto você ficou satisfeita(o) com essa monitoria?"
     O campo deve ser obrigatório
 
-### 6 - Crie um campo onde seja possível justificar a resposta anterior
+### 7 - Crie um campo onde seja possível justificar a resposta anterior
 
     O campo deve ser obrigatório
 
-### 6 - Crie um campo onde seja possível deixar uma sugestão
+### 8 - Crie um campo onde seja possível deixar uma sugestão
     
     Limite de 500 caracteres
 
-### 7 - Crie um botão para enviar as informações preenchidas
+### 9 - Crie um botão para enviar as informações preenchidas
 
-### 8 - Faça a validação dos campos obrigatórios e com limite de caracteres.
+### 10 - Faça a validação dos campos obrigatórios e com limite de caracteres.
 
  Caso não estejam dentro do esperado ao clicar no botão de submit, um alerta deve ser mostrado com a mensagem: ‘Dados Inválidos’. Caso contrário, a mensagem ‘Dados enviados com sucesso! Obrigado pelo feedback’ deverá aparecer na tela.
